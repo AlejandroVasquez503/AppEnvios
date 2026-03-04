@@ -1,0 +1,181 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\renes\\source\\repos\\appWebEnvio\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CB964F-2DE3-2786-A059-007451F5B9BA}|appWebEnvio\\appWebEnvio.csproj|c:\\users\\renes\\source\\repos\\appwebenvio\\appwebenvio\\models\\envios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CB964F-2DE3-2786-A059-007451F5B9BA}|appWebEnvio\\appWebEnvio.csproj|solutionrelative:appwebenvio\\models\\envios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CB964F-2DE3-2786-A059-007451F5B9BA}|appWebEnvio\\appWebEnvio.csproj|c:\\users\\renes\\source\\repos\\appwebenvio\\appwebenvio\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C2CB964F-2DE3-2786-A059-007451F5B9BA}|appWebEnvio\\appWebEnvio.csproj|solutionrelative:appwebenvio\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CB964F-2DE3-2786-A059-007451F5B9BA}|appWebEnvio\\appWebEnvio.csproj|c:\\users\\renes\\source\\repos\\appwebenvio\\appwebenvio\\appwebenvio.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C2CB964F-2DE3-2786-A059-007451F5B9BA}|appWebEnvio\\appWebEnvio.csproj|solutionrelative:appwebenvio\\appwebenvio.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CB964F-2DE3-2786-A059-007451F5B9BA}|appWebEnvio\\appWebEnvio.csproj|c:\\users\\renes\\source\\repos\\appwebenvio\\appwebenvio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CB964F-2DE3-2786-A059-007451F5B9BA}|appWebEnvio\\appWebEnvio.csproj|solutionrelative:appwebenvio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CB964F-2DE3-2786-A059-007451F5B9BA}|appWebEnvio\\appWebEnvio.csproj|c:\\users\\renes\\source\\repos\\appwebenvio\\appwebenvio\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CB964F-2DE3-2786-A059-007451F5B9BA}|appWebEnvio\\appWebEnvio.csproj|solutionrelative:appwebenvio\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CB964F-2DE3-2786-A059-007451F5B9BA}|appWebEnvio\\appWebEnvio.csproj|c:\\users\\renes\\source\\repos\\appwebenvio\\appwebenvio\\models\\paquetes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CB964F-2DE3-2786-A059-007451F5B9BA}|appWebEnvio\\appWebEnvio.csproj|solutionrelative:appwebenvio\\models\\paquetes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CB964F-2DE3-2786-A059-007451F5B9BA}|appWebEnvio\\appWebEnvio.csproj|c:\\users\\renes\\source\\repos\\appwebenvio\\appwebenvio\\models\\estadosenvios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CB964F-2DE3-2786-A059-007451F5B9BA}|appWebEnvio\\appWebEnvio.csproj|solutionrelative:appwebenvio\\models\\estadosenvios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CB964F-2DE3-2786-A059-007451F5B9BA}|appWebEnvio\\appWebEnvio.csproj|c:\\users\\renes\\source\\repos\\appwebenvio\\appwebenvio\\models\\clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CB964F-2DE3-2786-A059-007451F5B9BA}|appWebEnvio\\appWebEnvio.csproj|solutionrelative:appwebenvio\\models\\clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CB964F-2DE3-2786-A059-007451F5B9BA}|appWebEnvio\\appWebEnvio.csproj|c:\\users\\renes\\source\\repos\\appwebenvio\\appwebenvio\\models\\destinatarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CB964F-2DE3-2786-A059-007451F5B9BA}|appWebEnvio\\appWebEnvio.csproj|solutionrelative:appwebenvio\\models\\destinatarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CB964F-2DE3-2786-A059-007451F5B9BA}|appWebEnvio\\appWebEnvio.csproj|c:\\users\\renes\\source\\repos\\appwebenvio\\appwebenvio\\migrations\\20260219175624_inicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CB964F-2DE3-2786-A059-007451F5B9BA}|appWebEnvio\\appWebEnvio.csproj|solutionrelative:appwebenvio\\migrations\\20260219175624_inicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20260219175624_Inicial.cs",
+              "DocumentMoniker": "C:\\Users\\renes\\source\\repos\\appWebEnvio\\appWebEnvio\\Migrations\\20260219175624_Inicial.cs",
+              "RelativeDocumentMoniker": "appWebEnvio\\Migrations\\20260219175624_Inicial.cs",
+              "ToolTip": "C:\\Users\\renes\\source\\repos\\appWebEnvio\\appWebEnvio\\Migrations\\20260219175624_Inicial.cs",
+              "RelativeToolTip": "appWebEnvio\\Migrations\\20260219175624_Inicial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T17:56:25.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\renes\\source\\repos\\appWebEnvio\\appWebEnvio\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "appWebEnvio\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\renes\\source\\repos\\appWebEnvio\\appWebEnvio\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "appWebEnvio\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T17:03:36.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Paquetes.cs",
+              "DocumentMoniker": "C:\\Users\\renes\\source\\repos\\appWebEnvio\\appWebEnvio\\Models\\Paquetes.cs",
+              "RelativeDocumentMoniker": "appWebEnvio\\Models\\Paquetes.cs",
+              "ToolTip": "C:\\Users\\renes\\source\\repos\\appWebEnvio\\appWebEnvio\\Models\\Paquetes.cs",
+              "RelativeToolTip": "appWebEnvio\\Models\\Paquetes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T17:15:27.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EstadosEnvios.cs",
+              "DocumentMoniker": "C:\\Users\\renes\\source\\repos\\appWebEnvio\\appWebEnvio\\Models\\EstadosEnvios.cs",
+              "RelativeDocumentMoniker": "appWebEnvio\\Models\\EstadosEnvios.cs",
+              "ToolTip": "C:\\Users\\renes\\source\\repos\\appWebEnvio\\appWebEnvio\\Models\\EstadosEnvios.cs",
+              "RelativeToolTip": "appWebEnvio\\Models\\EstadosEnvios.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T17:15:10.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Clientes.cs",
+              "DocumentMoniker": "C:\\Users\\renes\\source\\repos\\appWebEnvio\\appWebEnvio\\Models\\Clientes.cs",
+              "RelativeDocumentMoniker": "appWebEnvio\\Models\\Clientes.cs",
+              "ToolTip": "C:\\Users\\renes\\source\\repos\\appWebEnvio\\appWebEnvio\\Models\\Clientes.cs",
+              "RelativeToolTip": "appWebEnvio\\Models\\Clientes.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T17:13:48.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Destinatarios.cs",
+              "DocumentMoniker": "C:\\Users\\renes\\source\\repos\\appWebEnvio\\appWebEnvio\\Models\\Destinatarios.cs",
+              "RelativeDocumentMoniker": "appWebEnvio\\Models\\Destinatarios.cs",
+              "ToolTip": "C:\\Users\\renes\\source\\repos\\appWebEnvio\\appWebEnvio\\Models\\Destinatarios.cs",
+              "RelativeToolTip": "appWebEnvio\\Models\\Destinatarios.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T17:12:31.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Envios.cs",
+              "DocumentMoniker": "C:\\Users\\renes\\source\\repos\\appWebEnvio\\appWebEnvio\\Models\\Envios.cs",
+              "RelativeDocumentMoniker": "appWebEnvio\\Models\\Envios.cs",
+              "ToolTip": "C:\\Users\\renes\\source\\repos\\appWebEnvio\\appWebEnvio\\Models\\Envios.cs",
+              "RelativeToolTip": "appWebEnvio\\Models\\Envios.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA8wBYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T17:14:51.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\renes\\source\\repos\\appWebEnvio\\appWebEnvio\\Program.cs",
+              "RelativeDocumentMoniker": "appWebEnvio\\Program.cs",
+              "ToolTip": "C:\\Users\\renes\\source\\repos\\appWebEnvio\\appWebEnvio\\Program.cs",
+              "RelativeToolTip": "appWebEnvio\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T17:32:15.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\renes\\source\\repos\\appWebEnvio\\appWebEnvio\\appsettings.json",
+              "RelativeDocumentMoniker": "appWebEnvio\\appsettings.json",
+              "ToolTip": "C:\\Users\\renes\\source\\repos\\appWebEnvio\\appWebEnvio\\appsettings.json",
+              "RelativeToolTip": "appWebEnvio\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-19T17:03:54.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appWebEnvio.csproj",
+              "DocumentMoniker": "C:\\Users\\renes\\source\\repos\\appWebEnvio\\appWebEnvio\\appWebEnvio.csproj",
+              "RelativeDocumentMoniker": "appWebEnvio\\appWebEnvio.csproj",
+              "ToolTip": "C:\\Users\\renes\\source\\repos\\appWebEnvio\\appWebEnvio\\appWebEnvio.csproj",
+              "RelativeToolTip": "appWebEnvio\\appWebEnvio.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-19T17:51:55.136Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
