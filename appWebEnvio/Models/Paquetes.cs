@@ -14,6 +14,7 @@ namespace appWebEnvio.Models
         [ForeignKey("EnvioId")]
         public Envios Envios { get; set; }
 
+        [Column(TypeName = "decimal(10,2)")]
         public decimal Peso { get; set; }
     }
 }

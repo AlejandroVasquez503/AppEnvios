@@ -1,0 +1,42 @@
+﻿using appWebEnvio.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace appWebEnvio.Data
+{
+    public class AppDbContext : DbContext
+    {
+        public AppDbContext(DbContextOptions<AppDbContext> options)
+        : base(options)
+        {
+        }
+
+        public DbSet<Clientes> Clientes { get; set; }
+        public DbSet<Destinatarios> Destinatarios { get; set; }
+        public DbSet<EstadosEnvios> EstadosEnvios { get; set; }
+        public DbSet<Envios> Envios { get; set; }
+        public DbSet<Paquetes> Paquetes { get; set; }
+        public DbSet<Administradores> Administradores { get; set; }
+        public DbSet<Comisiones> Comisiones { get; set; }
+        public DbSet<HistorialEstados> HistorialEstados { get; set; }
+        public DbSet<Auditorias> Auditorias { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Evitar rutas de cascada múltiples configurando NoAction/Restrict
+            modelBuilder.Entity<Envios>()
+                .HasOne(e => e.Destinatarios)
+                .WithMany(d => d.Envios)
+                .HasForeignKey(e => e.DestinatarioId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Envios>()
+                .HasOne(e => e.Clientes)
+                .WithMany(c => c.Envios)
+                .HasForeignKey(e => e.ClienteId)
+                .OnDelete(DeleteBehavior.Restrict);
+        }
+
+    }
+}

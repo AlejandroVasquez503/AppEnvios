@@ -8,6 +8,10 @@ namespace appWebEnvio.Models
         [Key]
         public int EnvioId { get; set; }
 
+        [MaxLength(50)]
+        [Required]
+        public string CodigoGuia { get; set; }
+
         [Required]
         public int ClienteId { get; set; }
 
@@ -29,7 +33,12 @@ namespace appWebEnvio.Models
         public DateTime FechaEnvio { get; set; }
         public DateTime? FechaEntrega { get; set; }
 
+        [Column(TypeName = "decimal(10,2)")]
         public decimal Costo { get; set; }
+
+        public DateTime FechaRegistro { get; set; } = DateTime.Now;
+
+        public DateTime? FechaModificacion { get; set; }
 
         public ICollection<Paquetes> Paquetes { get; set; }
     }

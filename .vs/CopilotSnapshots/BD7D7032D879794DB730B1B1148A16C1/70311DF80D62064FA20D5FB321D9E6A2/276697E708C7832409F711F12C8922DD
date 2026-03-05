@@ -1,0 +1,28 @@
+﻿@page "{id:int}"
+@model appWebEnvio.Pages.Clientes.DeleteModel
+@{
+    Layout = "_Layout";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-3">Eliminar Cliente</h1>
+
+    <div class="alert alert-warning mb-3">
+        ¡Advertencia! Esta acción no se puede deshacer.
+    </div>
+
+    <div style="max-width: 500px; margin-bottom: 20px;">
+        <p><strong>Nombre:</strong> @Model.Cliente.Nombre</p>
+        <p><strong>Teléfono:</strong> @Model.Cliente.Telefono</p>
+        <p><strong>Email:</strong> @Model.Cliente.Email</p>
+        <p><strong>Dirección:</strong> @Model.Cliente.Direccion</p>
+    </div>
+
+    <p>¿Desea eliminar este cliente?</p>
+
+    <form method="post">
+        <input type="hidden" asp-for="Cliente.ClienteId" />
+        <button type="submit" class="btn btn-danger">Sí, Eliminar</button>
+        <a asp-page="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

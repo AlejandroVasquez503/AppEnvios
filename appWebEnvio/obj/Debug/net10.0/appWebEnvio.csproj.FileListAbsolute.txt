@@ -141,6 +141,7 @@ C:\Users\renes\source\repos\appWebEnvio\appWebEnvio\obj\Debug\net10.0\appWebEnvi
 C:\Users\renes\source\repos\appWebEnvio\appWebEnvio\obj\Debug\net10.0\appWebEnvio.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\renes\source\repos\appWebEnvio\appWebEnvio\obj\Debug\net10.0\appWebEnvio.RazorAssemblyInfo.cache
 C:\Users\renes\source\repos\appWebEnvio\appWebEnvio\obj\Debug\net10.0\appWebEnvio.RazorAssemblyInfo.cs
+C:\Users\renes\source\repos\appWebEnvio\appWebEnvio\obj\Debug\net10.0\appWebEnvio.sourcelink.json
 C:\Users\renes\source\repos\appWebEnvio\appWebEnvio\obj\Debug\net10.0\rjimswa.dswa.cache.json
 C:\Users\renes\source\repos\appWebEnvio\appWebEnvio\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\Users\renes\source\repos\appWebEnvio\appWebEnvio\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json

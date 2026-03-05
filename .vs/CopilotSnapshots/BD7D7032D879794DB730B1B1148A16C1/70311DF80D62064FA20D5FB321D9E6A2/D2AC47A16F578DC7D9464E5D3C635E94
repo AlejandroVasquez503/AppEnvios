@@ -1,0 +1,99 @@
+﻿@page "{id:int}"
+@model appWebEnvio.Pages.Clientes.DetailsModel
+@{
+    Layout = "_Layout";
+}
+
+<style>
+    .details-container {
+        max-width: 500px;
+        margin: 3rem auto;
+    }
+    .details-title {
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        letter-spacing: -0.5px;
+    }
+    .detail-item {
+        padding: 1.2rem;
+        border-left: 4px solid #2c3e50;
+        background-color: #f8f9fa;
+        margin-bottom: 1rem;
+        border-radius: 2px;
+    }
+    .detail-label {
+        font-weight: 600;
+        color: #7f8c8d;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        display: block;
+        margin-bottom: 0.4rem;
+    }
+    .detail-value {
+        color: #2c3e50;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    .action-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    .btn-action {
+        padding: 0.8rem 2rem;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.2s;
+        border: none;
+        cursor: pointer;
+    }
+    .btn-primary-action {
+        background-color: #2c3e50;
+        color: white;
+    }
+    .btn-primary-action:hover {
+        background-color: #1a252f;
+    }
+    .btn-secondary-action {
+        background-color: transparent;
+        color: #2c3e50;
+        border: 1px solid #ddd;
+    }
+    .btn-secondary-action:hover {
+        border-color: #2c3e50;
+        background-color: #f8f9fa;
+    }
+</style>
+
+<div class="details-container">
+    <h1 class="details-title">Detalles del Cliente</h1>
+
+    <div class="detail-item">
+        <span class="detail-label">Nombre</span>
+        <div class="detail-value">@Model.Cliente.Nombre</div>
+    </div>
+
+    <div class="detail-item">
+        <span class="detail-label">Teléfono</span>
+        <div class="detail-value">@Model.Cliente.Telefono</div>
+    </div>
+
+    <div class="detail-item">
+        <span class="detail-label">Email</span>
+        <div class="detail-value">@Model.Cliente.Email</div>
+    </div>
+
+    <div class="detail-item">
+        <span class="detail-label">Dirección</span>
+        <div class="detail-value">@Model.Cliente.Direccion</div>
+    </div>
+
+    <div class="action-buttons">
+        <a asp-page="Edit" asp-route-id="@Model.Cliente.ClienteId" class="btn-action btn-primary-action">Editar</a>
+        <a asp-page="Index" class="btn-action btn-secondary-action">Volver</a>
+    </div>
+</div>

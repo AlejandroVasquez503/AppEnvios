@@ -1,0 +1,51 @@
+﻿@page
+@model appWebEnvio.Pages.Clientes.IndexModel
+@{
+    Layout = "_Layout";
+}
+
+<div class="container mt-5">
+    <div class="mb-4 d-flex justify-content-between align-items-center">
+        <h1>Clientes</h1>
+        <a class="btn btn-primary" asp-page="Create">Nuevo Cliente</a>
+    </div>
+
+    @if (Model.ClientesList.Count == 0)
+    {
+        <div class="alert alert-info">
+            <p>No hay clientes registrados.</p>
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="table-light">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Email</th>
+                        <th>Dirección</th>
+                        <th style="width: 200px;">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.ClientesList)
+                    {
+                        <tr>
+                            <td>@item.Nombre</td>
+                            <td>@item.Telefono</td>
+                            <td>@item.Email</td>
+                            <td>@item.Direccion</td>
+                            <td>
+                                <a class="btn btn-sm btn-outline-primary" asp-page="Details" asp-route-id="@item.ClienteId">Ver</a>
+                                <a class="btn btn-sm btn-outline-primary" asp-page="Edit" asp-route-id="@item.ClienteId">Editar</a>
+                                <a class="btn btn-sm btn-outline-danger" asp-page="Delete" asp-route-id="@item.ClienteId">Eliminar</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

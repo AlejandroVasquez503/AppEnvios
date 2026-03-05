@@ -1,0 +1,137 @@
+﻿@page
+@model appWebEnvio.Pages.Clientes.CreateModel
+@{
+    Layout = "_Layout";
+}
+
+<style>
+    .form-container {
+        max-width: 480px;
+        margin: 3rem auto;
+    }
+    .form-title {
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+        letter-spacing: -0.5px;
+    }
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+    .form-group label {
+        display: block;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+    }
+    .form-group input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        transition: border-color 0.2s;
+    }
+    .form-group input:focus {
+        outline: none;
+        border-color: #2c3e50;
+        box-shadow: 0 0 0 2px rgba(44, 62, 80, 0.1);
+    }
+    .error-message {
+        background-color: #ffe8e8;
+        border-left: 4px solid #c33;
+        padding: 1rem;
+        border-radius: 2px;
+        margin-bottom: 1.5rem;
+        color: #8b3333;
+    }
+    .error-message p {
+        margin: 0.3rem 0;
+    }
+    .form-actions {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    .btn-submit {
+        background-color: #2c3e50;
+        color: white;
+        padding: 0.8rem 2rem;
+        border: none;
+        border-radius: 4px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+    .btn-submit:hover {
+        background-color: #1a252f;
+    }
+    .btn-cancel {
+        background-color: transparent;
+        color: #2c3e50;
+        padding: 0.8rem 2rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        transition: border-color 0.2s;
+    }
+    .btn-cancel:hover {
+        border-color: #2c3e50;
+    }
+</style>
+
+<div class="form-container">
+    <h1 class="form-title">Nuevo Cliente</h1>
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="error-message">
+            @foreach (var modelState in ViewData.ModelState.Values)
+            {
+                @foreach (var error in modelState.Errors)
+                {
+                    <p>⚠️ @error.ErrorMessage</p>
+                }
+            }
+        </div>
+    }
+
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="Cliente.Nombre"></label>
+            <input asp-for="Cliente.Nombre" type="text" />
+            <span asp-validation-for="Cliente.Nombre" style="color: #c33; font-size: 0.85rem; display: block; margin-top: 0.3rem;"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Cliente.Telefono"></label>
+            <input asp-for="Cliente.Telefono" type="tel" />
+            <span asp-validation-for="Cliente.Telefono" style="color: #c33; font-size: 0.85rem; display: block; margin-top: 0.3rem;"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Cliente.Email"></label>
+            <input asp-for="Cliente.Email" type="email" />
+            <span asp-validation-for="Cliente.Email" style="color: #c33; font-size: 0.85rem; display: block; margin-top: 0.3rem;"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Cliente.Direccion"></label>
+            <input asp-for="Cliente.Direccion" type="text" />
+            <span asp-validation-for="Cliente.Direccion" style="color: #c33; font-size: 0.85rem; display: block; margin-top: 0.3rem;"></span>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn-submit">Crear Cliente</button>
+            <a asp-page="Index" class="btn-cancel">Cancelar</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

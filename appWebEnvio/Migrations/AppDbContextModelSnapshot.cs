@@ -22,6 +22,74 @@ namespace appWebEnvio.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("appWebEnvio.Models.Administradores", b =>
+                {
+                    b.Property<int>("AdministradorId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AdministradorId"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime?>("FechaModificacion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("FechaRegistro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("AdministradorId");
+
+                    b.ToTable("Administradores");
+                });
+
+            modelBuilder.Entity("appWebEnvio.Models.Auditorias", b =>
+                {
+                    b.Property<int>("AuditoriaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AuditoriaId"));
+
+                    b.Property<string>("Accion")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int?>("AdministradorId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("FechaAccion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("RegistroId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TablaAfectada")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("AuditoriaId");
+
+                    b.HasIndex("AdministradorId");
+
+                    b.ToTable("Auditorias");
+                });
+
             modelBuilder.Entity("appWebEnvio.Models.Clientes", b =>
                 {
                     b.Property<int>("ClienteId")
@@ -32,26 +100,60 @@ namespace appWebEnvio.Migrations
 
                     b.Property<string>("Direccion")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime?>("FechaModificacion")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("FechaRegistro")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Telefono")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.HasKey("ClienteId");
 
                     b.ToTable("Clientes");
+                });
+
+            modelBuilder.Entity("appWebEnvio.Models.Comisiones", b =>
+                {
+                    b.Property<int>("ComisionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ComisionId"));
+
+                    b.Property<int>("EnvioId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("FechaRegistro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("MontoComision")
+                        .HasColumnType("decimal(10,2)");
+
+                    b.Property<decimal>("Porcentaje")
+                        .HasColumnType("decimal(5,2)");
+
+                    b.HasKey("ComisionId");
+
+                    b.HasIndex("EnvioId");
+
+                    b.ToTable("Comisiones");
                 });
 
             modelBuilder.Entity("appWebEnvio.Models.Destinatarios", b =>
@@ -64,25 +166,41 @@ namespace appWebEnvio.Migrations
 
                     b.Property<string>("Ciudad")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("ClienteId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Direccion")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<DateTime?>("FechaModificacion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("FechaRegistro")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Pais")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Telefono")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.HasKey("DestinatarioId");
+
+                    b.HasIndex("ClienteId");
 
                     b.ToTable("Destinatarios");
                 });
@@ -98,8 +216,13 @@ namespace appWebEnvio.Migrations
                     b.Property<int>("ClienteId")
                         .HasColumnType("int");
 
+                    b.Property<string>("CodigoGuia")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<decimal>("Costo")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(10,2)");
 
                     b.Property<int>("DestinatarioId")
                         .HasColumnType("int");
@@ -111,6 +234,12 @@ namespace appWebEnvio.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("FechaEnvio")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("FechaModificacion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("FechaRegistro")
                         .HasColumnType("datetime2");
 
                     b.HasKey("EnvioId");
@@ -142,7 +271,33 @@ namespace appWebEnvio.Migrations
 
                     b.HasKey("EstadoId");
 
-                    b.ToTable("EstadosEnvio");
+                    b.ToTable("EstadosEnvios");
+                });
+
+            modelBuilder.Entity("appWebEnvio.Models.HistorialEstados", b =>
+                {
+                    b.Property<int>("HistorialId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("HistorialId"));
+
+                    b.Property<int>("EnvioId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EstadoId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("FechaCambio")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("HistorialId");
+
+                    b.HasIndex("EnvioId");
+
+                    b.HasIndex("EstadoId");
+
+                    b.ToTable("HistorialEstados");
                 });
 
             modelBuilder.Entity("appWebEnvio.Models.Paquetes", b =>
@@ -157,7 +312,7 @@ namespace appWebEnvio.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("Peso")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(10,2)");
 
                     b.HasKey("PaqueteId");
 
@@ -166,29 +321,79 @@ namespace appWebEnvio.Migrations
                     b.ToTable("Paquetes");
                 });
 
+            modelBuilder.Entity("appWebEnvio.Models.Auditorias", b =>
+                {
+                    b.HasOne("appWebEnvio.Models.Administradores", "Administrador")
+                        .WithMany()
+                        .HasForeignKey("AdministradorId");
+
+                    b.Navigation("Administrador");
+                });
+
+            modelBuilder.Entity("appWebEnvio.Models.Comisiones", b =>
+                {
+                    b.HasOne("appWebEnvio.Models.Envios", "Envios")
+                        .WithMany()
+                        .HasForeignKey("EnvioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Envios");
+                });
+
+            modelBuilder.Entity("appWebEnvio.Models.Destinatarios", b =>
+                {
+                    b.HasOne("appWebEnvio.Models.Clientes", "Clientes")
+                        .WithMany()
+                        .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Clientes");
+                });
+
             modelBuilder.Entity("appWebEnvio.Models.Envios", b =>
                 {
                     b.HasOne("appWebEnvio.Models.Clientes", "Clientes")
                         .WithMany("Envios")
                         .HasForeignKey("ClienteId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("appWebEnvio.Models.Destinatarios", "Destinatarios")
                         .WithMany("Envios")
                         .HasForeignKey("DestinatarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("appWebEnvio.Models.EstadosEnvios", "EstadosEnvios")
                         .WithMany("Envios")
                         .HasForeignKey("EstadoId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Clientes");
 
                     b.Navigation("Destinatarios");
+
+                    b.Navigation("EstadosEnvios");
+                });
+
+            modelBuilder.Entity("appWebEnvio.Models.HistorialEstados", b =>
+                {
+                    b.HasOne("appWebEnvio.Models.Envios", "Envios")
+                        .WithMany()
+                        .HasForeignKey("EnvioId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("appWebEnvio.Models.EstadosEnvios", "EstadosEnvios")
+                        .WithMany()
+                        .HasForeignKey("EstadoId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Envios");
 
                     b.Navigation("EstadosEnvios");
                 });

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("appWebEnvio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37ca1ac319e3ea9e771d91b7380b8af9d03ed11b")]
 [assembly: System.Reflection.AssemblyProductAttribute("appWebEnvio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("appWebEnvio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

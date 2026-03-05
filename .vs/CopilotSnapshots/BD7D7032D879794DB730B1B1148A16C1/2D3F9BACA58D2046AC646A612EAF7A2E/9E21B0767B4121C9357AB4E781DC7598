@@ -1,0 +1,32 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace appWebEnvio.Models
+{
+    public class Clientes
+    {
+        [Key]
+        public int ClienteId { get; set; }
+
+        [Required]
+        [MaxLength(50)]
+        public string Nombre { get; set; }
+
+        [Required]
+        [MaxLength(20)]
+        public string Telefono { get; set; }
+
+        [Required]
+        [MaxLength(100)]
+        public string Email { get; set; }
+
+        [Required]
+        [MaxLength(255)]
+        public string Direccion { get; set; }
+
+        public DateTime FechaRegistro { get; set; } = DateTime.Now;
+
+        public DateTime? FechaModificacion { get; set; }
+
+        public ICollection<Envios> Envios { get; set; }
+    }
+}

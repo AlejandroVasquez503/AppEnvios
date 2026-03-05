@@ -1,0 +1,19 @@
+﻿@page "{id:int}"
+@model appWebEnvio.Pages.Clientes.DetailsModel
+@{
+    Layout = "_Layout";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-3">Detalles del Cliente</h1>
+
+    <div style="max-width: 500px;">
+        <p><strong>Nombre:</strong> @Model.Cliente.Nombre</p>
+        <p><strong>Teléfono:</strong> @Model.Cliente.Telefono</p>
+        <p><strong>Email:</strong> @Model.Cliente.Email</p>
+        <p><strong>Dirección:</strong> @Model.Cliente.Direccion</p>
+
+        <a asp-page="Edit" asp-route-id="@Model.Cliente.ClienteId" class="btn btn-primary">Editar</a>
+        <a asp-page="Index" class="btn btn-secondary">Volver</a>
+    </div>
+</div>

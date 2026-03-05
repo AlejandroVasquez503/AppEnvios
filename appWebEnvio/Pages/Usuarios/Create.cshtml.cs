@@ -1,0 +1,57 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using appWebEnvio.Data;
+using appWebEnvio.Models;
+using ModelClientes = appWebEnvio.Models.Clientes;
+
+namespace appWebEnvio.Pages.Clientes
+{
+    public class CreateModel : PageModel
+    {
+        private readonly AppDbContext _context;
+
+        public CreateModel(AppDbContext context)
+        {
+            _context = context;
+        }
+
+        [BindProperty]
+        public ModelClientes Cliente { get; set; }
+
+        public void OnGet()
+        {
+        }
+
+        public async Task<IActionResult> OnPostAsync()
+        {
+            ModelState.Remove("Cliente.Envios");
+
+            if (Cliente.FechaRegistro == default)
+            {
+                Cliente.FechaRegistro = DateTime.Now;
+            }
+
+            if (!ModelState.IsValid)
+            {
+                var errors = ModelState.Values.SelectMany(v => v.Errors);
+                foreach (var error in errors)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Model Error: {error.ErrorMessage}");
+                }
+                return Page();
+            }
+
+            try
+            {
+                _context.Clientes.Add(Cliente);
+                await _context.SaveChangesAsync();
+                return RedirectToPage("Index");
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, $"Error al guardar: {ex.Message}");
+                return Page();
+            }
+        }
+    }
+}

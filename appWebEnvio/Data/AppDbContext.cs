@@ -12,9 +12,48 @@ namespace appWebEnvio.Data
 
         public DbSet<Clientes> Clientes { get; set; }
         public DbSet<Destinatarios> Destinatarios { get; set; }
-        public DbSet<EstadosEnvios> EstadosEnvio { get; set; }
+        public DbSet<EstadosEnvios> EstadosEnvios { get; set; }
         public DbSet<Envios> Envios { get; set; }
         public DbSet<Paquetes> Paquetes { get; set; }
+        public DbSet<Administradores> Administradores { get; set; }
+        public DbSet<Comisiones> Comisiones { get; set; }
+        public DbSet<HistorialEstados> HistorialEstados { get; set; }
+        public DbSet<Auditorias> Auditorias { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Envios>()
+                .HasOne(e => e.Destinatarios)
+                .WithMany(d => d.Envios)
+                .HasForeignKey(e => e.DestinatarioId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Envios>()
+                .HasOne(e => e.Clientes)
+                .WithMany(c => c.Envios)
+                .HasForeignKey(e => e.ClienteId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Envios>()
+                .HasOne(e => e.EstadosEnvios)
+                .WithMany(s => s.Envios)
+                .HasForeignKey(e => e.EstadoId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<HistorialEstados>()
+                .HasOne(h => h.Envios)
+                .WithMany()
+                .HasForeignKey(h => h.EnvioId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<HistorialEstados>()
+                .HasOne(h => h.EstadosEnvios)
+                .WithMany()
+                .HasForeignKey(h => h.EstadoId)
+                .OnDelete(DeleteBehavior.Restrict);
+        }
 
     }
 }
